@@ -13,12 +13,12 @@ public class Drivetrain extends SubsystemBase {
 
   public Drivetrain() {
     this.motorsRight = new SpeedControllerGroup(
-      new VictorSP(DrivetrainConstants.motorRightOnePort), 
-      new VictorSP(DrivetrainConstants.motorRightTwoPort)
+      new VictorSP(DrivetrainConstants.motorRightPort[0]), 
+      new VictorSP(DrivetrainConstants.motorRightPort[1])
     );
     this.motorsLeft = new SpeedControllerGroup(
-      new VictorSP(DrivetrainConstants.motorLeftOnePort), 
-      new VictorSP(DrivetrainConstants.motorLeftTwoPort)
+      new VictorSP(DrivetrainConstants.motorLeftPort[0]), 
+      new VictorSP(DrivetrainConstants.motorLeftPort[1])
     );
 
     this.drive = new DifferentialDrive(this.motorsRight, this.motorsLeft);
